@@ -20,6 +20,10 @@ public class WebApplication implements SparkApplication {
 		
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("name", "Sam");
+		
+		get("/", (rq, rs) -> "default route");
+
+		
 		get("/hello1", (rq, rs) -> new ModelAndView(map, "another/helloqq.mustache"), new MustacheTemplateEngine());
 		
 
