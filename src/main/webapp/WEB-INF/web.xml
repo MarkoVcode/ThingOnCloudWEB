@@ -4,17 +4,16 @@
     <description>
         This is web interface for ThingOnCloud.com online service.
     </description>
- <filter>
+  <filter>
     <filter-name>TOCWeb</filter-name>
     <filter-class>spark.servlet.SparkFilter</filter-class>
     <init-param>
         <param-name>applicationClass</param-name>
         <param-value>com.thingoncloud.web.run.WebApplication</param-value>
     </init-param>
-</filter>
-
-<filter-mapping>
+  </filter>
+  <filter-mapping>
     <filter-name>TOCWeb</filter-name>
     <url-pattern>/*</url-pattern>
-</filter-mapping>
+  </filter-mapping>
 </web-app>
