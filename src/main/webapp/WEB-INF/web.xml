@@ -12,8 +12,20 @@
         <param-value>com.thingoncloud.web.run.WebApplication</param-value>
     </init-param>
   </filter>
+  <filter>
+    <filter-name>TOCRestDoc</filter-name>
+    <filter-class>spark.servlet.SparkFilter</filter-class>
+    <init-param>
+        <param-name>applicationClass</param-name>
+        <param-value>com.thingoncloud.web.run.RestDocumentation</param-value>
+    </init-param>
+  </filter>  
   <filter-mapping>
     <filter-name>TOCWeb</filter-name>
     <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>TOCRestDoc</filter-name>
+    <url-pattern>/docv1/*</url-pattern>
   </filter-mapping>
 </web-app>
